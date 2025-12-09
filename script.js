@@ -37,7 +37,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contact-form');
     
     // Le formulaire ne se soumet pas car il manque l'écouteur d'événement
-    // À ajouter : contactForm.addEventListener('submit', handleContactSubmit);
+    if (contactForm) {
+        contactForm.addEventListener('submit', handleContactSubmit);
+    }
     
     // Animation des cartes au scroll
     const observerOptions = {
